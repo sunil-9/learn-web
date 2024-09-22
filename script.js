@@ -4,17 +4,14 @@ let counter = 0;
 let colors = ["red", "green", "blue"];
 
 addBtn.onclick = function () {
-  //   console.log("add btn clicked");
-  counter++;
-  let ourText = document.getElementById("ourText");
-  ourText.innerText = counter;
-  ourText.style.color = colors[counter % 3];
+  changeText(counter++);
 };
 minusBtn.onclick = function () {
   if (counter == 0) return;
-  counter--;
-  let ourText = document.getElementById("ourText");
-  ourText.innerText = counter;
-  ourText.style.color = colors[counter % 3];
-
+  changeText(counter--);
 };
+function changeText(num) {
+  let ourText = document.getElementById("ourText");
+  ourText.innerText = num;
+  ourText.style.color = colors[num % 3];
+}
