@@ -1,12 +1,16 @@
-// let spanHi= document.getElementById("hi")
-// spanHi.style.backgroundColor="red";
-// spanHi.style.display="none"
+let addBtn = document.getElementById("btnAdd");
+let minusBtn = document.getElementById("btnMinus");
+let counter = 0;
 
-// let first = document.getElementsByClassName("first");
-// console.log("first", first);
-// first.style.backgroundColor = "red";
+addBtn.onclick = function () {
+  //   console.log("add btn clicked");
+  counter++;
+  let ourText = document.getElementById("ourText");
+  ourText.innerText = counter;
+};
+minusBtn.onclick = function () {
+    counter--;
+    let ourText = document.getElementById("ourText");
+    ourText.innerText = counter;
 
-let hi = document.getElementById("hi");
-console.log(hi.dataset.test,"this is dataset")
-
-
+};
